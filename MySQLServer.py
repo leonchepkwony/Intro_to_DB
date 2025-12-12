@@ -1,5 +1,5 @@
 import mysql.connector 
-from mysql.connector import Error
+
 try:
     db = mysql.connector.connect(
         host = 'localhost',
@@ -17,6 +17,6 @@ try:
         mycursor.close()
         db.close()
 
-except Error as e:
+except mysql.connector.Error  as e:
     print("Error while creating Database: ", e)
 
